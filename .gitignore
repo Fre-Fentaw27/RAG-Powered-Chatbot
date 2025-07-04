@@ -7,3 +7,5 @@ data/*
 data/raw/*
 data/processed/*
 *.csv
+# Vector store files
+vector_store/
