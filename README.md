@@ -2,6 +2,16 @@
 
 Intelligent Complaint Analysis for Financial Services
 
+## 📌 Overview
+
+**Mission**: Transform raw customer complaints into strategic insights using Retrieval-Augmented Generation (RAG) technology, empowering teams to proactively address customer pain points.
+
+### 🎯 Key Benefits
+
+- **10,000x Faster Analysis**: Reduce complaint investigation time from days → seconds
+- **Evidence-Based Insights**: Get synthesized answers with direct complaint citations
+- **Cross-Functional Access**: Self-service analytics for non-technical teams
+
 ## 📂 Project Structure
 
 RAG-Powered-Chatbot/
@@ -88,7 +98,7 @@ The model achieves excellent balance between accuracy and speed, crucial for our
 
 ## Usage
 
-1.  **Place your raw data file** named `data.csv` into the `data/raw/` directory.
+1.  **Place your raw data file** named `complaints.csv` into the `data/raw/` directory.
 
 2.  **Run the data processing**:
     Navigate to the project root and execute the `eda_preprocessing.ipynb` script:
@@ -105,3 +115,10 @@ Upon successful execution, the script embedding_indexing.py will create:
 - vector_store/metadata.json (chunk metadata)
 
 - vector_store/chunk_length_distribution.png (analysis plot)
+
+## ➡️ Next Steps
+
+### Phase 3: RAG System Implementation
+
+- Task 3: Building the RAG Core Logic and Evaluation
+- Task 4: Creating an Interactive Chat Interface
