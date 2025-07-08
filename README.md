@@ -116,9 +116,56 @@ Upon successful execution, the script embedding_indexing.py will create:
 
 - vector_store/chunk_length_distribution.png (analysis plot)
 
+## Task 3: Building the RAG Core Logic and Evaluation
+
+### 1. Retriever Implementation
+
+- **Function**: `ComplaintRetriever().retrieve(query, k=5)`
+- **Technology Stack**:
+  - FAISS index from Task 2
+  - `all-MiniLM-L6-v2` embeddings
+- **Key Features**:
+  - Handles out-of-bound index errors
+  - Returns scores normalized to [0,1]
+  - Preserves complaint metadata (ID, product type)
+
+### 2. Prompt Engineering
+
+```python
+PROMPT_TEMPLATE = """
+You are a financial analyst assistant for CrediTrust. Analyze these complaints:
+
+Context:
+{context}
+
+Question: {question}
+
+Rules:
+1. Answer ONLY using provided context
+2. Identify product types (Credit Card/BNPL/etc.)
+3. Never invent information
+4. If unclear: "I cannot determine from available complaints"
+"""
+
+### 3. Generator Implementation**
+LLM: google/flan-t5-small (default)
+
+Key Parameters:
+
+- max_new_tokens=300
+
+- temperature=0.7 (balanced creativity)
+
+- top_p=0.9 (nucleus sampling)
+
+Fallbacks:
+
+- GPU acceleration if available
+
+- Detailed error logging
+
 ## ➡️ Next Steps
 
 ### Phase 3: RAG System Implementation
-
-- Task 3: Building the RAG Core Logic and Evaluation
 - Task 4: Creating an Interactive Chat Interface
+```
