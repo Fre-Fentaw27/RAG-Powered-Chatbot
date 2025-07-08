@@ -173,8 +173,8 @@ Fallbacks:
 
 ## Task 3 Outputs
 
-![RAG Pipeline Output](images/image.png)  
-_Screenshot showing the terminal-based question-answering interface_
+- ![RAG Pipeline Output](images/image.png)  
+  _Screenshot showing the terminal-based question-answering interface_
 
 ## Task 4: Creating an Interactive Chat Interface
 
@@ -201,5 +201,5 @@ _Screenshot showing the terminal-based question-answering interface_
 
 ## Task Outputs
 
-![Gradio Interface](images/image1.png)  
-_Web interface with question input, answer display, and source citations_
+- ![Gradio Interface](images/image1.png)  
+  _Web interface with question input, answer display, and source citations_
