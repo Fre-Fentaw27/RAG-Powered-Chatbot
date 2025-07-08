@@ -10,3 +10,4 @@ data/processed/*
 # Vector store files
 vector_store/
 .env
+images/

@@ -22,14 +22,19 @@ RAG-Powered-Chatbot/
 │ ├──preprocessed/
 │ └── filtered_complaints.csv # Processed data (output of Task 1)
 ├── notebooks/
+│ ├── evaluation_rag_t3.md
+├── notebooks/
 │ ├── eda_preprocessing.ipynb # Task 1: Data exploration & cleaning
 ├── src/
 │ └── embedding_indexing.py # Python script version of Task 2
+│ └──app_t4.py
+│ └──rag_pipeline_t3.py
 ├── vector_store/ # Auto-created (output of Task 2)
 │ ├── complaints_index.faiss
 │ ├── metadata.json
 │ └── chunk_length_distribution.png
 ├── .gitignore/ # to exclude files
+└── requirements.txt
 └── README.md
 
 ## Task 1: Exploratory Data Analysis and Data Preprocessing
@@ -164,8 +169,37 @@ Fallbacks:
 
 - Detailed error logging
 
-## ➡️ Next Steps
-
-### Phase 3: RAG System Implementation
-- Task 4: Creating an Interactive Chat Interface
 ```
+
+## Task 3 Outputs
+
+![RAG Pipeline Output](images/image.png)  
+_Screenshot showing the terminal-based question-answering interface_
+
+## Task 4: Creating an Interactive Chat Interface
+
+# Overview
+
+- Built a user-friendly Gradio interface to democratize access to the RAG system, featuring:
+  - Question input with submission button
+  - Streaming-style answer display
+  - Source citations (top 3 relevant complaints)
+  - Clear conversation functionality
+
+## HOW TO RUN
+
+- pip install gradio
+- python app.py
+
+## Launch the interface:
+
+- python src/app.py
+
+## Access in browser at:
+
+- http://localhost:7860
+
+# ## Task Outputs
+
+![Gradio Interface](images/image1.png)  
+_Web interface with question input, answer display, and source citations_
