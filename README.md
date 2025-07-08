@@ -199,7 +199,7 @@ _Screenshot showing the terminal-based question-answering interface_
 
 - http://localhost:7860
 
-# ## Task Outputs
+## Task Outputs
 
 ![Gradio Interface](images/image1.png)  
 _Web interface with question input, answer display, and source citations_
