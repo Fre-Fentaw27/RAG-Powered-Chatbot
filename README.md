@@ -26,9 +26,9 @@ RAG-Powered-Chatbot/
 ├── notebooks/
 │ ├── eda_preprocessing.ipynb # Task 1: Data exploration & cleaning
 ├── src/
-│ └── embedding_indexing.py # Python script version of Task 2
-│ └──app_t4.py
-│ └──rag_pipeline_t3.py
+│ └── embedding_indexing_update.py # Python script version of Task 2
+│ └──app_updated.py
+│ └──rag_pipeline_updated.py
 ├── vector_store/ # Auto-created (output of Task 2)
 │ ├── complaints_index.faiss
 │ ├── metadata.json
@@ -173,7 +173,7 @@ Fallbacks:
 
 ## Task 3 Outputs
 
-- ![RAG Pipeline Output](images/image.png)  
+- ![RAG Pipeline Output](images/Image3_updated.jpg)  
   _Screenshot showing the terminal-based question-answering interface_
 
 ## Task 4: Creating an Interactive Chat Interface
@@ -193,7 +193,7 @@ Fallbacks:
 
 ## Launch the interface:
 
-- python src/app.py
+- python src/app_updated.py
 
 ## Access in browser at:
 
@@ -201,5 +201,5 @@ Fallbacks:
 
 ## Task Outputs
 
-- ![Gradio Interface](images/image1.png)  
+- ![Gradio Interface](images/Image2_updated.jpg)  
   _Web interface with question input, answer display, and source citations_
