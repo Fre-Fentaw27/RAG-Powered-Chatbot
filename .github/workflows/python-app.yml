@@ -13,6 +13,11 @@ jobs:
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v3
+        with:
+          # This is the crucial line that enables Git LFS.
+          # It tells the runner to download the actual large files
+          # instead of just the pointer files.
+          lfs: true
 
       - name: 🐍 Set up Python 3.9
         uses: actions/setup-python@v4
@@ -36,3 +41,7 @@ jobs:
               echo "Directory $dir not found. Skipping..."
             fi
           done
+
+  # Note: You can also add `lfs: true` to the lint job's checkout step if you want,
+  # but it's not strictly necessary as the linting process doesn't
+  # typically need the large vector store file.
