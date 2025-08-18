@@ -1,0 +1,39 @@
+name: RAG Pipeline CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-cov
+      - name: Run tests
+        run: |
+          pytest --cov=src --cov-report=xml
+        env:
+          DATA_PATH: ./data/preprocessed/filtered_complaints.csv
+          VECTOR_STORE_PATH: ./vector_store
+      - name: Upload coverage
+        uses: codecov/codecov-action@v3
+
+  lint:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+      - name: Lint
+        run: |
+          pip install black flake8
+          black --check .
+          flake8 src
