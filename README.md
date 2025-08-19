@@ -14,6 +14,7 @@ Intelligent Complaint Analysis for Financial Services
 
 ## 📂 Project Structure
 
+```bash
 RAG-Powered-Chatbot/
 ├── .venv/ # Virtual environment
 ├── data/
@@ -25,6 +26,7 @@ RAG-Powered-Chatbot/
 │ ├── evaluation_rag_t3.md
 ├── notebooks/
 │ ├── eda_preprocessing.ipynb # Task 1: Data exploration & cleaning
+│ ├── eda.ipynb
 ├── src/
 │ └── embedding_indexing_update.py # Python script version of Task 2
 │ └──app_updated.py
@@ -36,6 +38,7 @@ RAG-Powered-Chatbot/
 ├── .gitignore/ # to exclude files
 └── requirements.txt
 └── README.md
+```
 
 ## Task 1: Exploratory Data Analysis and Data Preprocessing
 
