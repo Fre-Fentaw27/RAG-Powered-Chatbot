@@ -40,7 +40,7 @@ RAG-Powered-Chatbot/
 └── README.md
 ```
 
-## Task 1: Exploratory Data Analysis and Data Preprocessing
+## Task 1: Data Preprocessing
 
 ## Exploratory Data Analysis Summary
 
