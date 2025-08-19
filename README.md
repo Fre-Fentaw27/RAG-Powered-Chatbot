@@ -206,3 +206,32 @@ Fallbacks:
 
 - ![Gradio Interface](images/Image2_updated.jpg)  
   _Web interface with question input, answer display, and source citations_
+
+## 📊 Task 5 - Exploratory Data Analysis
+
+**Objective**: Analyze complaint data patterns and preprocess text for RAG.
+
+**Work Done**:
+
+- Cleaned raw complaints data (PII removal, standardization)
+- Identified top complaint categories (Credit Reporting: 31%, Debt Collection: 22%)
+- Optimized text chunking (256 tokens) - see `notebooks/eda_preprocessing.ipynb`
+- Generated visualizations:
+  - `data/preprocessed/category_distribution.png`
+  - `vector_store/chunk_length_distribution.png`
+
+## ⚙️ Task 6 - CI/CD & Testing
+
+**Objective**: Automate testing and ensure code quality.
+
+**Implementation**:
+
+- CI Pipeline (`.github/workflows/python-app.yml`):
+  - Runs pytest on push/PR (82% coverage required)
+  - Enforces code formatting (Black) and linting (Flake8)
+- Key Tests (`tests/test_rag.py`):
+  ```python
+  def test_retrieval():  # Checks search relevance
+  def test_generation(): # Validates answer quality
+  def test_empty_query(): # Tests edge cases
+  ```
